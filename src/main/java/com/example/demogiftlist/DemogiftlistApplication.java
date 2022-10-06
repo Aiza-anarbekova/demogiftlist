@@ -8,6 +8,8 @@ public class DemogiftlistApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(DemogiftlistApplication.class, args);
+
+        System.out.println("Hello GiftList");
     }
 
 }
