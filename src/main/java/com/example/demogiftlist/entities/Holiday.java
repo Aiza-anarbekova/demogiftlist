@@ -22,6 +22,7 @@ public class Holiday {
     private String image;
     @ManyToOne
     private User user;
+
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "holiday")
     private List<Wish> wishes;
 }

@@ -20,7 +20,7 @@ public class Charity {
     @ManyToOne
     private Category category;
     @ManyToOne
-    private User resorver;
+    private User reservoir;
     @ManyToOne
     private User user;
     @Enumerated

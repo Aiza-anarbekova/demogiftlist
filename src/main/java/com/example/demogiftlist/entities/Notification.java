@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Table
@@ -16,12 +17,17 @@ public class Notification {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-    @ManyToOne
+    private LocalDate created_date;
+    private Boolean seen;
+
+    @OneToOne
+    private User requestNoFriend;
+    @OneToOne
     private Wish wish;
     @ManyToOne
     private User user;
     @ManyToOne
     private Complaint complaint;
-    @ManyToOne
+    @OneToOne
     private Gift gift;
 }

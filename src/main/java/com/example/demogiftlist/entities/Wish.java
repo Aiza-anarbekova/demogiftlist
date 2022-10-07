@@ -18,19 +18,22 @@ public class Wish {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-    @ManyToOne
-    private User user;
     private String wishName;
     private String linkToGift;
-    @ManyToOne
-    private Holiday holiday;
     private LocalDate dateOfHoliday;
     private String description;
     private String image;
     private Status wishStatus;
-    @ManyToOne
+
+    @OneToOne
     private User bookingUser;
+
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "wish")
     private List<Complaint> complaints;
+    @ManyToOne
+    private User user;
+
+    @ManyToOne
+    private Holiday holiday;
 
 }
