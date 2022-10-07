@@ -19,7 +19,7 @@ public class Complaint {
     @ManyToOne
     private Wish wish;
     @ManyToOne
-    private User complator;
+    private User complainer;
     private Boolean seen;
     private Reason reasonOfComplaint;
 }

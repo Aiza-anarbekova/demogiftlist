@@ -17,6 +17,7 @@ public class Gift {
     private Long id;
     @ManyToOne
     private User user;
-    @ManyToOne
+
+    @OneToOne
     private Wish wish;
 }

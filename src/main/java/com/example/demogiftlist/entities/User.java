@@ -1,5 +1,6 @@
 package com.example.demogiftlist.entities;
 
+import com.example.demogiftlist.enums.Role;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -22,21 +23,31 @@ public class User {
     private String email;
     private Boolean isBlock;
     private String photo;
+    private Role role;
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<Wish> wishes;
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<Gift> gifts;
+
     @ManyToOne
     private Charity charity;
+
     @OneToMany
     private List<User> friends;
+
     @OneToMany
     private List<User> requests;
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<Holiday> holidays;
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<Notification> notifications;
+
     @OneToOne
     private UserInfo userInfo;
+
 
 }
