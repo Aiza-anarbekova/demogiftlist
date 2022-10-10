@@ -11,6 +11,7 @@ import java.util.Collections;
 
 public class SwaggerConfig {
     private static final String API_KEY = "Bearer Token";
+    //lk
 
     @Bean
     public OpenAPI customOpenAPI() {
